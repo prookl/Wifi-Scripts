@@ -17,7 +17,7 @@ Copy the output and namet it `SSID_Name.conf`. Remove the clear text password an
 $ ./wifi-scanner
 $ ./connect_wpa SSID_Name.conf
 ```
-After you are done.
+Disconncet when you are done.
 ```
 $ ./disconnect_internets
 ```
