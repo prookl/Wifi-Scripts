@@ -1,0 +1,5 @@
+#!/bin/bash
+iface="wlp3s0"
+
+sudo iw $iface scan | awk -f awk_scan.awk | sort | uniq
+

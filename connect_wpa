@@ -1,0 +1,8 @@
+#!/bin/bash
+iface=""
+sudo iw $iface disconnect
+ps aux | grep "dhclient $iface" | grep -v grep | awk '{print $2}' | xargs sudo kill
+sudo killall wpa_supplicant
+sudo ifconfig $iface 0.0.0.0
+sudo wpa_supplicant -B -i $iface -c $1
+sudo dhclient $iface
